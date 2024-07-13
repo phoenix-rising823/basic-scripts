@@ -25,7 +25,8 @@ parser.add_argument("-s", "--special", action="store_const",
 parser.add_argument("-n", "--normal", action="store_const",
                     const=alpha_num_secret,
                     help="Alphanumeric secret.")
-parser.add_argument("-l", "--length", help="Set secret length", type=int)
+parser.add_argument("-l", "--length", help="Set secret length", type=int,
+                    default=8)
 args = parser.parse_args()
 
 
